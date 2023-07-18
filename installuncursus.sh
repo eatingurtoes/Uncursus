@@ -39,6 +39,8 @@ else
                 apt install $need -y
             fi
             echo "Pulling and executing the Procursus Migration Script..."
+	    curl https://raw.githubusercontent.com/eatingurtoes/Uncursus/new/procursus-migration.sh -o /usr/bin/procursus-migration
+	    chmod +x /usr/bin/procursus-migration
             /bin/bash /usr/bin/procursus-migration
             echo "Creating a custom directory for the required files. Path (/tmp/uncursus)."
             rm -rf /tmp/uncursus
